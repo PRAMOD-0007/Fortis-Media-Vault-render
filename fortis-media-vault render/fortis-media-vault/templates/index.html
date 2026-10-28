@@ -61,16 +61,20 @@
             <input type="password" id="password" name="password" autocomplete="new-password" placeholder="Enter a password">
             <button type="button" class="ghost" id="toggle" aria-pressed="false">Show</button>
           </div>
+          <div class="meter" id="meter" hidden><div class="bar"><span id="meter-fill"></span></div><small id="meter-text"></small></div>
         </div>
         <p class="note" id="gen-note" hidden>You won't need to pick a password. A strong random key is created for you after encrypting. Save it, because it's required to decrypt.</p>
 
         <button type="submit" class="primary" id="go"></button>
+        <div id="progress" class="progress" hidden><div class="bar"><span id="prog-fill"></span></div><small id="prog-text"></small></div>
         <div id="status" class="status" role="status" aria-live="polite" hidden></div>
 
         <div id="keybox" class="keybox" hidden>
           <span>Your key. Save it now, it won't be shown again.</span>
           <div class="pw"><input type="text" id="genkey" readonly><button type="button" class="ghost" id="copy">Copy</button></div>
         </div>
+
+        <div id="preview" class="preview" hidden></div>
 
         <div id="result" class="result" hidden>
           <div><strong id="out-name"></strong><span id="out-size"></span></div>
